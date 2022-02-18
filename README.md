@@ -1,3 +1,3 @@
 # blockchain-work
 
-Work/demo products learning Solidity and the blockchain.
+Learning Solidity and the blockchain.
