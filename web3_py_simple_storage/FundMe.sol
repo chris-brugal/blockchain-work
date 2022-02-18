@@ -13,7 +13,7 @@ contract FundMe {
 
     //constructor, gets called once contract deployed
     constructor() {
-        owner = msg.sender;
+    owner = msg.sender;
     }
 
     //payable means can pay for things

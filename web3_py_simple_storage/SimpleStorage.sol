@@ -1,8 +1,7 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8;
+pragma solidity >=0.6.0 <0.9.0;
 
 contract SimpleStorage {
-
     //will be init to 0
     uint256 public favoriteNumber;
 
@@ -14,14 +13,13 @@ contract SimpleStorage {
     People[] public people;
     mapping(string => uint256) public nameToFavoriteNumber;
 
-
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
     }
 
     //view just looks at stuff on the chain, doesnt change the state
     //pure functions do math/change state (require gas?)
-    function retrieve() public view returns(uint256) {
+    function retrieve() public view returns (uint256) {
         return favoriteNumber;
     }
 
@@ -30,6 +28,5 @@ contract SimpleStorage {
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         people.push(People(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
-    } 
-
+    }
 }
